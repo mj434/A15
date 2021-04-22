@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <title>San Joaquin Valley Town Hall</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 87.5%;
+            width: 96%;
+            background-color: white;
+            margin: 15px auto;
+            padding: 20px;
+            /*	border: 1px solid black*/
+        }
+        #nav_menu ul {
+            list-style: none;
+            position: relative;    /* So the first submenu can be positioned within the main menu */
+        }
+        #nav_menu ul li {
+            float: left;
+        }
+        #nav_menu ul ul {
+            display: none;         /* Don't display submenu until hover of the li element */
+            position: absolute;
+            top: 100%;             /* Position the submenu at the bottom of the main menu */
+        }
+        #nav_menu ul ul li {
+            float: none;           /* Display the submenus vertically */
+            position: relative;    /* So the second submenu can be positioned within the first submenu */
+        }
+        #nav_menu ul ul li ul {
+            position: absolute;
+            left: -100%;           /* Position the second submenu at the left side of the li element */
+            top: 0;                /* Position the second submenu at the top of the li element */
+        }
+        #nav_menu ul li:hover > ul {
+            display: block;        /* Display the submenu on hover of the li element */
+        }
+        #nav_menu ul::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        /* The styles for the formatting of the multi-tier navigation menu */
+        #nav_menu ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #nav_menu ul li {
+            width: 25%;
+        }
+        #nav_menu ul li a {
+            text-align: center;
+            display: block;
+            padding: 1em 0;
+            text-decoration: none;
+            background-color: #800000;
+            color: white;
+            font-weight: bold;
+        }
+
+        #nav_menu ul li a.current {
+            color: yellow;
+        }
+        #nav_menu ul li a:hover, #nav_menu ul li a:focus {
+            background-color: #800000; !important;
+        }
+        #nav_menu ul li:hover ul {
+            width: 100%;
+        }
+        #nav_menu ul li:hover ul li a {
+            display: block;
+            width: 178px;
+            text-align: center;
+        }
+        .slicknav_menu {
+            display: none;
+        }
+        @media only screen and (max-width: 959px) {
+            #nav_menu ul li a {
+                font-size: .875em;                      /* 14 / 16 */
+            }
+            @media only screen and (max-width: 767px) {
+                #nav_menu {
+                    display: none;
+                }
+                .slicknav_menu {
+                    display: block;
+                }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+    <img src="images/town_hall_logo.gif" alt="Town Hall Logo">
+    <h2>San Joaquin Valley Town Hall</h2>
+    <h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
+</header>
+<nav id="mobilemenu">
+<ul id="nav_menu">
+    <li><a href = "./index.html" class = "current">Home</a></li>
+    <li><a href="index.html">Speakers</a></li>
+    <li><a href="index.html">Luncheons</a></li>
+    <li><a href = "#tickets">Tickets</a></li>
+    <li><a href="index.html">About Us</a>
+        <ul class="dropdown">
+            <li><a>Our History</a></li>
+            <li><a>Board of Directors</a></li>
+            <li><a>Past Speakers</a></li>
+            <li><a>Contact Information</a></li>
+        </ul>
+    </li>
+</ul>
+</nav>
+<main>
+    <section>
+    <h2>Our Mission</h2>
+    <p>San Joaquin Valley Town Hall is a non-profit organization that is run by an all-volunteer board of directors. Our mission is to bring nationally and internationally renowned, thought-provoking speakers who inform, educate, and entertain our audience! As one or our members told us:
+    </p>
+    <blockquote>&quot;Each year I give a ticket package to each of our family members. I think of it as the gift of knowledge...and that is priceless.&quot;
+    </blockquote>
+    <h1>Speaker of the Month</h1>
+    <article>
+        <h2>Fossil Threads in the Web of Life</h2>
+        <img src="images/sampson_dinosaur.jpg" alt="Scott Sampson with dinosaur" style="max-width: 40%; min-width: 150px;">
+        <h3>February<br>
+            Scott Sampson</h3>
+        <p>What's 75 million years old and brand spanking new? A teenage Utahceratops!
+            Come to the Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research
+            Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research
+            has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted
+            fieldwork in a number of countries in Africa.</p>
+        <p>
+            <a href="speakers/sampson.html">Read more.</a>&nbsp;<a href="./media/sampson.swf" target="_blank">Or play video.</a>
+        </p>
+    </article>
+    <h2 id="tickets">Our Ticket Packages</h2>
+    <ul>
+        <li>Season Package: $95</li>
+        <li>Patron Package: $20</li>
+        <li>Single Speaker: $25</li>
+    </ul>
+    </section>
+    <aside>
+    <h2>Guest speakers</h2>
+    <div class="speakerColumn">
+    <h2>October<br>
+        <a href = "speakers/toobin.html">Jeffrey Toobin</a>
+    </h2>
+    <img src="./images/toobin75.jpg" alt="Toobin">
+    <h2>November<br>
+        <a href = "speakers/sorkin.html">Andrew Ross Sorkin</a>
+    </h2>
+    <img src="./images/sorkin75.jpg" alt="Sorkin">
+    <h2>January<br>
+        <a href = "speakers/chua.html">Amy Chua</a>
+    </h2>
+    <img src="./images/chua75.jpg" alt="Chua">
+    <h2>February<br>
+        <a href = "speakers/sampson.html">Scott Sampson</a>
+    </h2>
+    <img src="./images/sampson75.jpg" alt="Chua">
+    </div>
+    </aside>
+</main>
+<footer>
+    <p>&copy; 2021, Mohit Joshi, Bloomfield, NJ 07003</p>
+</footer>
+</body>
+</html>
